@@ -1,0 +1,47 @@
+student_1 = {"Name": "Connor", "Age": 21, "Grade": "A"}
+student_2 = {"Name": "Sam", "Age": 19, "Grade": "C"}
+student_3 = {"Name": "Erica", "Age": 21, "Grade": "B+"}
+
+while True:
+  print("\nPress '1' if you want to see all the students information")
+  print("\nPress '2' if you want to modify their grade")
+  print("\nPress '3' if you want to Exit")
+  userinput = input("\nWhat do you want to do?")
+  userinput = int(userinput)
+
+  if userinput == 1: 
+    info = student_1["Name"].title()
+    info1 = student_1["Age"]
+    info2 = student_1["Grade"]
+    print(f"\n{info} is {info1} and his grade is an {info2}")
+    info3 = student_2["Name"].title()
+    info4 = student_2["Age"]
+    info5 = student_2["Grade"]
+    print(f"\n{info3} is {info4} and his grade is a {info5}")
+    info6 = student_3["Name"].title()
+    info7 = student_3["Age"]
+    info8 = student_3["Grade"]
+    print(f"\n{info6} is {info7} and his grade is a {info8}")
+
+  elif userinput == 2:
+    while True:
+      userinput2 = input("Which Grade do you want to change? Enter '1' for Connor's Grade, Enter '2' for Sams grade, Enter '3' for Erica's grade, or Enter '4' to exit: ")
+      userinput2 = int(userinput2)
+      if userinput2 == 4:
+        break
+      
+      x = input("What would you like to change it too?: ")    
+      if userinput2 == 1:
+        student_1["Grade"] = x
+      elif userinput2 == 2:
+        student_2["Grade"] = x
+      elif userinput2 == 3:
+        student_3["Grade"] = x
+      else:
+        print("Please pick a number between 1-3")
+    else:
+      break
+
+  else:
+    break
+
